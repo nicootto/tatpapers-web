@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
-export const Image = styled.div`
-  width: auto;
-  height: auto;
-  max-width: 100%;
-
-  > img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-  }
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 `;

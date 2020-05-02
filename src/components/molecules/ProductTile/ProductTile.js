@@ -9,8 +9,6 @@ export const ProductTile = ({ product }) => {
       : product.images.find(image => image.featured).url;
 
   return (
-    <S.Image>
-      <img src={featuredImg} />
-    </S.Image>
+    <S.Image src={featuredImg} />
   );
 };
