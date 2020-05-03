@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {mediumScreen, smallScreen} from "../../../globalStyles/constants";
+import { mediumScreen, smallScreen } from "../../../globalStyles/constants";
 
 export const List = styled.div`
   display: grid;
@@ -17,7 +17,7 @@ export const List = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
   }
-  
+
   a {
     height: 100%;
   }

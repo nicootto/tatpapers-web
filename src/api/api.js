@@ -2,50 +2,46 @@ import React, { useState, useEffect } from "react";
 
 import { apiUrl } from "../constants";
 
-export const useCategories = () => {
-  const [data, setData] = useState(null);
+const cache = new Map();
+
+export const useGet = (endpoint, initialState) => {
+  const [data, setData] = useState(initialState);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${apiUrl}/categories/`)
-      .then(r => r.json())
-      .then(r => {
-        setData(r);
-        setLoading(false);
-      });
+    async function fetchData() {
+      let r = cache.get(endpoint);
+      if (!r) {
+        r = await fetch(endpoint);
+        r = await r.json();
+        cache.set(endpoint, r);
+      }
+
+      setData(r);
+      setLoading(false);
+    }
+    fetchData();
   }, []);
 
   return [data, loading];
+};
+
+export const useCategories = () => {
+  const endpoint = `${apiUrl}/categories/`;
+  return useGet(endpoint);
 };
 
 export const useCategory = id => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const endpoint = `${apiUrl}/categories/${id}/`;
+  return useGet(endpoint);
+};
 
-  useEffect(() => {
-    fetch(`${apiUrl}/categories/${id}/`)
-      .then(r => r.json())
-      .then(r => {
-        setData(r);
-        setLoading(false);
-      });
-  }, []);
-
-  return [data, loading];
+export const useLabels = id => {
+  const endpoint = `${apiUrl}/labels/`;
+  return useGet(endpoint, []);
 };
 
 export const useProduct = id => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch(`${apiUrl}/products/${id}`)
-      .then(r => r.json())
-      .then(r => {
-        setData(r);
-        setLoading(false);
-      });
-  }, []);
-
-  return [data, loading];
+  const endpoint = `${apiUrl}/products/${id}`;
+  return useGet(endpoint);
 };

@@ -36,9 +36,20 @@ export const defaultTheme = {
   colors: {
     ...C.theme
   },
+  iconButton: {
+    backgroundColor: C.theme.white,
+    hoverBackgroundColor: C.theme.primary,
+    hoverForegroundColor: C.theme.white,
+    size: 36
+  },
   spacing: {
     gutter: "1.875rem", // 30px
     spacer: `${C.spacer}rem` // 16px
+  },
+  tile: {
+    backgroundColor: C.grayLight,
+    divisionLine: C.grayMedium,
+    hoverBorder: C.blueDark
   },
 
   typography: {

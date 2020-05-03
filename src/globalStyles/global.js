@@ -20,15 +20,31 @@ export const GlobalStyle = createGlobalStyle`
       font-size: ${C.h1FontSize};
       line-height: ${C.h1LineHeight};
     }
+    
+    h2 {
+      font-family: ${C.headerFontFamily};
+      font-size: ${C.h2FontSize};
+      line-height: 1.7rem;
+    }
 
     h3 {
-      font-family: ${C.headerFontFamily};
       font-size: ${C.h3FontSize};
       line-height: 1.7rem;
     }
 
     h4 {
       font-size: ${C.h4FontSize};
+    }
+    
+    button {
+      background-color: transparent;
+      cursor: pointer;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      outline: none;
+      padding: 0px;
     }
         
   }

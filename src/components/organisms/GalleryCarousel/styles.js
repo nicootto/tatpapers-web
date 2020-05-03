@@ -13,5 +13,6 @@ export const Image = styled.div`
 
   > img {
     object-fit: contain;
+    border-radius: 10px;
   }
 `;

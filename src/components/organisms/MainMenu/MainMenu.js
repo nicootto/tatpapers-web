@@ -2,13 +2,14 @@ import React from "react";
 import logo from "../../../assets/images/logo.png";
 
 import * as S from "./styles";
+import { Link } from "react-router-dom";
 
 export const MainMenu = () => {
   return (
     <S.Wrapper>
-      <a href="/">
+      <Link to="/">
         <S.Logo alt="Tatpapers" src={logo} />
-      </a>
+      </Link>
     </S.Wrapper>
   );
 };

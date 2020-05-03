@@ -28,6 +28,6 @@ export const Image = styled.div`
   border-radius: 10px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h2`
   margin-bottom: 1rem;
 `;
