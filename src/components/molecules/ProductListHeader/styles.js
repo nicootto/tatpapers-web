@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: 0 2rem;
   font-size: ${props => props.theme.typography.smallFontSize};
+  border-radius: 10px;
 `;
 
 export const FiltersButton = styled.button`

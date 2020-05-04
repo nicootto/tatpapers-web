@@ -6,9 +6,14 @@ import { IconButton } from "../../atoms/IconButton";
 import { AttributeValuesChecklist } from "../../molecules/AttributeValuesChecklist";
 
 import * as S from "./styles";
-import {IProps} from "./types";
+import { IProps } from "./types";
 
-export const FilterSidebar: React.FC<IProps> = ({ show, hide, attributes}) => {
+export const FilterSidebar: React.FC<IProps> = ({
+  show,
+  hide,
+  attributes,
+  onFilterChange
+}) => {
   return (
     <Overlay show={show} hide={hide} duration={0}>
       <S.Wrapper>
@@ -18,7 +23,10 @@ export const FilterSidebar: React.FC<IProps> = ({ show, hide, attributes}) => {
             <GrClose />
           </IconButton>
         </S.Header>
-        <AttributeValuesChecklist values={attributes}/>
+        <AttributeValuesChecklist
+          values={attributes}
+          onValueClick={onFilterChange}
+        />
       </S.Wrapper>
     </Overlay>
   );

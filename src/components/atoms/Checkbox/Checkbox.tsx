@@ -13,7 +13,6 @@ export const Checkbox: React.FC<IProps> = ({
   children
 }) => {
   const ref = React.useRef<HTMLDivElement>(null);
-
   return (
     <S.Checkbox
       onClick={event => {

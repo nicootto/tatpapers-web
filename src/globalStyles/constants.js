@@ -6,16 +6,21 @@ export const black = "#323232";
 export const blue = "rgb(33,18,94)";
 export const blueDark = "#190c4e";
 export const blueLight = "#513CA3";
-export const blueOverlay = `rgba(33,18,94,0.1)`;
-export const blueOverlayDark = `rgba(33,18,94,0.2)`;
+export const blueOverlay = `rgba(33, 18, 94, 0.1)`;
+export const blueOverlayDark = `rgba(33, 18, 94, 0.2)`;
 export const gray = "#7d7d7d";
 export const grayMedium = "#c4c4c4";
 export const grayDark = "#323232";
 export const grayLight = "#f1f5f5";
-export const green = "#3ed256";
+export const green = "#92AC6C";
+export const greenDark = "#6E8151";
+export const greenLight = "#BECDA7";
+export const greenOverlay = `rgba(146, 172, 108, 0.1)`;
+export const greenOverlayDark = `rgba(146, 172, 108, 0.2)`;
 export const overlayColor = "rgba(199, 207, 207, 0.8)";
-export const pink = "#ba5272";
-export const pinkDark = "#864649";
+export const pink = "#F294B7";
+export const pinkDark = "#EE709F";
+export const pinkLight = "#FCE2EC";
 export const rose = "#c22d74";
 export const turquoise = "#13bebb";
 export const turquoiseDark = "#06a09e";
@@ -58,13 +63,13 @@ export const theme = {
   // overlay: overlayColor,
   primary: pink,
   primaryDark: pinkDark,
-  // primaryLight: turquoiseLight,
-  // primaryTransparent: turquoiseTransparent,
-  secondary: blue,
-  secondaryDark: blueDark,
-  secondaryLight: blueLight,
-  secondaryOverlay: blueOverlay,
-  secondaryOverlayDark: blueOverlayDark,
+  primaryLight: pinkLight,
+  primaryTransparent: turquoiseTransparent,
+  secondary: green,
+  secondaryDark: greenDark,
+  secondaryLight: greenLight,
+  secondaryOverlay: greenOverlay,
+  secondaryOverlayDark: greenOverlayDark,
   // success: green,
   // tabTitle: darkGreen,
   // tableDivider: tabelGray,

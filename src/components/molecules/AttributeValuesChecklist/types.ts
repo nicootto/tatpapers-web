@@ -1,5 +1,6 @@
-import {IFilterAttribute} from "../../../types/IFilterAttributes";
+import { IFilterAttribute } from "../../../types/IFilterAttributes";
 
 export interface IProps {
-  values: IFilterAttribute[]
+  values: IFilterAttribute[];
+  onValueClick: (value: IFilterAttribute) => void;
 }

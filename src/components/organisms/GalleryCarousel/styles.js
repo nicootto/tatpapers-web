@@ -12,7 +12,8 @@ export const Image = styled.div`
   }
 
   > img {
-    object-fit: contain;
+    width: auto;
+    height: 100%;
     border-radius: 10px;
   }
 `;

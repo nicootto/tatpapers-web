@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import querystring from "querystring";
+import { defer } from "rxjs";
 
 import { apiUrl } from "../constants";
 
@@ -16,12 +18,19 @@ export const useGet = (endpoint, initialState) => {
         r = await r.json();
         cache.set(endpoint, r);
       }
+      return r;
+    }
 
+    const subscription = defer(() => fetchData()).subscribe(r => {
+      console.log(r);
       setData(r);
       setLoading(false);
-    }
-    fetchData();
-  }, []);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [endpoint]);
 
   return [data, loading];
 };
@@ -31,8 +40,13 @@ export const useCategories = () => {
   return useGet(endpoint);
 };
 
-export const useCategory = id => {
-  const endpoint = `${apiUrl}/categories/${id}/`;
+export const useCategory = (id, filters) => {
+  let endpoint = `${apiUrl}/categories/${id}/`;
+  if (filters) {
+    const queryParams = querystring.stringify({ label: filters });
+    console.log(queryParams);
+    endpoint = `${endpoint}?${queryParams}`;
+  }
   return useGet(endpoint);
 };
 

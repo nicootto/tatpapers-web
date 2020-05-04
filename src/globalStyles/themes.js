@@ -12,14 +12,14 @@ export const defaultTheme = {
         color: C.white,
         hoverBackground: C.theme.primaryDark,
         hoverColor: C.white
+      },
+      secondary: {
+        activeBackground: C.theme.secondaryDark,
+        background: C.white,
+        color: C.theme.secondary,
+        hoverBackground: C.theme.secondary,
+        hoverColor: C.white
       }
-      // secondary: {
-      //   activeBackground: C.theme.secondaryDark,
-      //   background: C.white,
-      //   color: C.theme.secondary,
-      //   hoverBackground: C.theme.secondary,
-      //   hoverColor: C.white
-      // }
     },
     padding: {
       main: "0.9rem 3.7rem",
@@ -47,7 +47,7 @@ export const defaultTheme = {
     spacer: `${C.spacer}rem` // 16px
   },
   tile: {
-    backgroundColor: C.grayLight,
+    backgroundColor: C.pinkLight,
     divisionLine: C.grayMedium,
     hoverBorder: C.blueDark
   },
