@@ -32,13 +32,13 @@ export const darkGreen = "#06847B";
 
 // typography
 export const baseFontFamily = "Inter, sans-serif";
-export const headerFontFamily = "Sacramento, cursive;";
+export const headerFontFamily = "Amatic SC, cursive;";
 export const baseFontSize = "1rem"; // 16px
 export const smallFontSize = "0.875rem"; // 14px
 export const baseLineHeight = "1.25rem"; // 20px
 export const h1FontSize = "4rem"; // 64px
 export const h1LineHeight = "1";
-export const h2FontSize = "3rem"; // 24px
+export const h2FontSize = "2.5rem"; // 24px
 export const h3FontSize = "1.5rem"; // 24px
 export const h4FontSize = "1.125rem"; // 18px
 export const boldFontWeight = "600";

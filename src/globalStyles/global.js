@@ -6,6 +6,9 @@ import { baseFontColor } from "./constants";
 
 export const GlobalStyle = createGlobalStyle`
   ${reset};
+  
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+  
   body {
     font-family: ${C.baseFontFamily};
     font-size: ${C.baseFontSize};

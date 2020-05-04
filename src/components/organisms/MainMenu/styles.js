@@ -7,6 +7,6 @@ export const Wrapper = styled.div`
 
 export const Logo = styled.img`
   width: auto;
-  height: 70px;
+  height: 90px;
   margin-bottom: 1rem;
 `;
